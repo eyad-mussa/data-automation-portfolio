@@ -15,6 +15,12 @@ Covers aggregations, grouping, ordering, and database shape inspection
 relevant to e-commerce reporting and inventory analysis.
 Tools: Python, SQLite, Pandas
 
+### Supermarket Sales DuckDB Analysis
+Same retail dataset queried using DuckDB — an in-process analytical database engine.
+Demonstrates SQL aggregations, grouping, and ordering directly on CSV files without a database server.
+Relevant to fast local data processing for e-commerce analytics pipelines.
+Tools: Python, DuckDB, Pandas
+
 ### Coming Soon
 - Document Q&A system using LangChain and Gemini API
 - Analytics dashboard with AI summary layer using BigQuery and Looker Studio
