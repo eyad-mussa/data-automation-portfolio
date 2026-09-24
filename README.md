@@ -1,30 +1,30 @@
-# Data Automation Portfolio
+# Data Analysis Practice Projects
 
-A collection of Python projects in AI-powered data automation and intelligent data pipelines.
+Beginner projects where I practice querying and summarizing data with Python.
+The same dataset is analyzed three ways to compare the tools.
 
-## Projects
+**Dataset:** `supermarket_sales.csv`, a public supermarket sales dataset
+(1,000 rows, 17 columns). This is practice data, not client data.
 
-### Supermarket Sales Analysis
-Exploratory data analysis on 1000 real supermarket transactions using Pandas.
-Covers sales by product line, revenue by payment method, branch performance, and data quality checks.
-Tools: Python, Pandas
+## Scripts
 
-### Supermarket Sales SQL Analysis
-Retail sales dataset analyzed using SQL queries via SQLite and Python.
-Covers aggregations, grouping, ordering, and database shape inspection 
-relevant to e-commerce reporting and inventory analysis.
-Tools: Python, SQLite, Pandas
+| File | Tool | What it does |
+|---|---|---|
+| `sales_analysis.py` | pandas | Summaries and groupby analysis |
+| `sales_sql_analysis.py` | SQLite + pandas | Loads the CSV into a database, then answers the same questions with SQL |
+| `duckdb_analysis.py` | DuckDB + pandas | Runs SQL directly on the CSV file |
 
-### Supermarket Sales DuckDB Analysis
-Same retail dataset queried using DuckDB — an in-process analytical database engine.
-Demonstrates SQL aggregations, grouping, and ordering directly on CSV files without a database server.
-Relevant to fast local data processing for e-commerce analytics pipelines.
-Tools: Python, DuckDB, Pandas
+Each script prints: dataset shape, total sales by product line,
+average rating by branch, revenue by payment method, and missing values per column.
 
-### Coming Soon
-- Document Q&A system using LangChain and Gemini API
-- Analytics dashboard with AI summary layer using BigQuery and Looker Studio
-- Business workflow automation using Python and n8n
+## How to run
 
-## Stack
-Python, Pandas, LangChain, FastAPI, BigQuery, Gemini API, n8n
+1. Put `supermarket_sales.csv` in the same folder as the scripts.
+2. `pip install pandas duckdb`
+3. `python sales_analysis.py` (or either of the other two)
+
+## Limits
+
+These are exercises. They produce descriptive summaries only, with no charts
+and no business conclusions. Next, I plan to build a project that answers a
+real business question using e-commerce data.
